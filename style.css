@@ -240,7 +240,9 @@ body {
 
     .left .text {
         font-size: 14px;
+        font-weight: 400;
         margin-bottom: 3rem;
+        line-height: 1.8;
     }
 
     .error-msg {
