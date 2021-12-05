@@ -245,6 +245,19 @@ body {
         line-height: 1.8;
     }
 
+    .form-input {
+        padding: 12px 30px;
+    }
+
+    .form-btn {
+        width: 70px;
+        padding: 12px;
+    }
+
+    .error-icon {
+        right: 75px;
+    }
+
     .error-msg {
         text-align: left;
     }
