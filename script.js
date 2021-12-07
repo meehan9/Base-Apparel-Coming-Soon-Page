@@ -18,9 +18,26 @@ form.addEventListener("submit", (e) => {
     }
 });
 
+// email validation function
 function validateEmail(email) {
     let re =
         /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     return re.test(String(email).toLowerCase());
 }
+
+// remove error message if clicked outside input field
+function removeMsg() {
+    setTimeout(() => {
+        email.classList.remove("error");
+        errorIcon.classList.remove("error");
+        errorMsg.classList.remove("error");
+    }, 100);
+}
+
+document.addEventListener("click", (e) => {
+    let isClickInsideForm = form.contains(e.target);
+    if (!isClickInsideForm) {
+        removeMsg();
+    }
+});
